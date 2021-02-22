@@ -30,5 +30,8 @@ function colorPlanner() {
         console.log("clicked");
         var hourClicked = $(this).attr("data-hour");
         var text = $("#" + hourClicked).val();
+
+        localStorage.setItem("button1", hourClicked);
+        localStorage.getItem("button1");
     })
 }

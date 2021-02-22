@@ -13,7 +13,7 @@ var h3 = $("#15");
 var h4 = $("#16");
 var h5 = $("#17");
 
-colorPlanner();
+
 
 function colorPlanner() {
 
@@ -61,13 +61,77 @@ function colorPlanner() {
 
     //Start comparison for every hour to current hour
 
-    if(currentHour < nineEl){
-        $(".schedule").addClass(".past");
-    } else if (currentHour === nineEl){
-        $(".schedule").addClass(".present");
-    } else {
-        $(".schedule").addClass(".future");
+    if(nineEl < currentHour){
+        $("textarea").addClass('past');
+    } else if (nineEl > currentHour){
+        $("textarea").addClass('future');
+    } else{
+        $("textarea").addClass('present');
     }
 
+    if(tenEl < currentHour){
+        $("textarea").addClass('past');
+    } else if (tenEl > currentHour){
+        $("textarea").addClass('future');
+    } else{
+        $("textarea").addClass('present');
+    }
 
+    if(elevenEl < currentHour){
+        $("textarea").addClass('past');
+    } else if (elevenEl > currentHour){
+        $("textarea").addClass('future');
+    } else{
+        $("textarea").addClass('present');
+    }
+
+    if(twelveEl < currentHour){
+        $("textarea").addClass('past');
+    } else if (twelveEl > currentHour){
+        $("textarea").addClass('future');
+    } else{
+        $("textarea").addClass('present');
+    }
+
+    if(oneEl < currentHour){
+        $("textarea").addClass('past');
+    } else if (oneEl > currentHour){
+        $("textarea").addClass('future');
+    } else{
+        $("textarea").addClass('present');
+    }
+
+    if(twoEl < currentHour){
+        $("textarea").addClass('past');
+    } else if (twoEl > currentHour){
+        $("textarea").addClass('future');
+    } else{
+        $("textarea").addClass('present');
+    }
+
+    if(threeEl < currentHour){
+        $("textarea").addClass('past');
+    } else if (threeEl > currentHour){
+        $("textarea").addClass('future');
+    } else{
+        $("textarea").addClass('present');
+    }
+
+    if(fourEl < currentHour){
+        $("textarea").addClass('past');
+    } else if (fourEl > currentHour){
+        $("textarea").addClass('future');
+    } else{
+        $("textarea").addClass('present');
+    }
+
+    if(fiveEl < currentHour){
+        $("textarea").addClass('past');
+    } else if (fiveEl > currentHour){
+        $("textarea").addClass('future');
+    } else{
+        $("textarea").addClass('present');
+    }
 }
+
+colorPlanner();

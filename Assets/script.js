@@ -3,8 +3,8 @@ var time = moment();
 $("#currentDay").text(time.format("MMM Do, YYYY"));
 
 //Gets the current hour
-//var currHour = moment();
-var currentHour = parseInt(currHour.moment().format("H"));
+var currHour = moment();
+var currentHour = parseInt(currHour.format("H"));
 console.log(currentHour);
 
 colorPlanner();
@@ -12,9 +12,9 @@ colorPlanner();
 
 function colorPlanner() {
 
-    //Looping through work day schudler hours and add it to a # symbol and then comparing hour to currenthour and adding class
+    //Looping through work day schudler hours and add it to a # symbol and then comparing hour to currenthour and
     for (let i = 9; i < 18; i++) {
-        var hourEl = $("#" + i)
+        var hourEl = $("#" + i);
 
         if (i < currentHour) {
             hourEl.addClass("past");
